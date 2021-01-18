@@ -4,10 +4,12 @@
       <GoogleMap
   api-key="AIzaSyBzIgJXoF2aCKNf_ri6DLgOw_bJ9dK0I0M"
   style="width: 100%; height: 500px"
-  :center="center"
-  :zoom="15"
+  :center="{ lat: lat, lng: lng }"
+  :zoom="25"
+  :scrollwheel=false
+  :draggable="false"
   >
-    <Marker :options="{ position: center }" />
+    <Marker :options="{ position: { lat: lat, lng: lng } }" />
   </GoogleMap>
   </div>
 </template>
@@ -36,11 +38,7 @@ export default {
         })
       });
       
-    },
-    setup() {
-    const center = { lat: this.lat, lng: this.lng }
-    return { center }
-  },
+    }
 }
 
 
