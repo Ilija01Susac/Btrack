@@ -3,7 +3,7 @@
     <h1>Čapljina-Mostar(8:30)</h1>
       <GoogleMap
   api-key="AIzaSyBzIgJXoF2aCKNf_ri6DLgOw_bJ9dK0I0M"
-  style="width: 100%; height: 500px"
+  style="width: 100%; height: 600px"
   :center="{ lat: lat, lng: lng }"
   :zoom="25"
   :scrollwheel=false
@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import db from './firebaseInit'
+import db from '../components/firebaseInit'
 import { GoogleMap, Marker } from 'vue3-google-map'
 
 export default {

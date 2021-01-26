@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "309271363703",
+    "firebase_url": "https://fsre2020-291513-default-rtdb.firebaseio.com",
+    "project_id": "fsre2020-291513",
+    "storage_bucket": "fsre2020-291513.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:309271363703:android:ad7f744ad8971b33788672",
+        "android_client_info": {
+          "package_name": "com.atomsindia.local"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "309271363703-1k40ct7i8dmvrdo79m3orup2v9i5pqss.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAaVTFcFa1yyCTm_kQQ33tKGo8r-niL9R4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "309271363703-1k40ct7i8dmvrdo79m3orup2v9i5pqss.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

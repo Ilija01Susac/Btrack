@@ -1,46 +1,31 @@
 <template>
-  <div class="bus">
-    <h1>{{ id }}</h1>
-      <GoogleMap
-  api-key="AIzaSyBzIgJXoF2aCKNf_ri6DLgOw_bJ9dK0I0M"
-  style="width: 100%; height: 500px"
-  :center="{ lat: lat, lng: lng }"
-  :zoom="25"
-  :scrollwheel=false
-  :draggable="false"
-  >
-    <Marker :options="{ position: { lat: lat, lng: lng } }" />
-  </GoogleMap>
+  <div class="container">
+    <div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Čapljina - Mostar</h5>
+        <p class="card-text">Polazak: 8:30</p>
+        <p class="card-text">Dolazak: 9:30</p>
+        <a href="http://localhost:8080/#/map" class="btn btn-primary">Prati lokaciju</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Mostar - Široki Brijeg</h5>
+        <p class="card-text">Polazak: 9:30</p>
+        <p class="card-text">Dolazak: 10:30</p>
+        <a href="http://localhost:8080/#/map" class="btn btn-primary">Prati lokaciju</a>
+      </div>
+    </div>
+  </div>
+</div>
   </div>
 </template>
 
 <script>
-import db from './firebaseInit'
-import { GoogleMap, Marker } from 'vue3-google-map'
-
-export default {
-  name: 'Bus',
-  components: { GoogleMap, Marker },
-  data () {
-      return {
-            id: null,
-            lat: null,
-            lng: null
-      }
-    },
-  created () {
-      db.collection('buses').onSnapshot((snapshotChange) => {
-        snapshotChange.forEach((doc) => {
-          console.log(doc.data());
-          this.id = doc.data().id;
-          this.lat = doc.data().lat;
-          this.lng = doc.data().lng;
-        })
-      });
-      
-    }
-}
-
 
 </script>
 
